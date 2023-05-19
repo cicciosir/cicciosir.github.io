@@ -1,0 +1,24 @@
+:root{
+    box-sizing: border-box;
+}
+<!-- stiamo dicedno che il padre è borderbox è tutti gli elementi erediterannò bordebox -->
+*,
+::before
+::after{
+    box-sizing: inherit;
+}
+
+body * + *{
+    margin-top: 1.5em;
+}
+
+body{
+    background-color: #709b90;
+    font-family: Calibri, sans-serif;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: aqua;
+}
