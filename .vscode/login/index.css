@@ -1,0 +1,136 @@
+*, * ::after, * ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+}
+form*{
+    font-family: "Poppins" sans-serif;
+    color: white;
+    letter-spacing: 0.6px;
+    outline: none;
+    border: none;
+
+}
+form{
+    background-color: rgba(255, 255, 255, 0.13);
+    height: 500px;
+    width: 480 px;
+    backdrop-filter: blur(10 px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 35px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    border-radius: 10px;
+
+}
+form h3{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+}
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input{
+   display: block;
+   height: 50px;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.7);
+   border-radius: 3px;
+   padding: 0 10px;
+   margin-top: 8px;
+   font-size: 15px;
+   font-weight: 300; 
+}
+
+::placeholder{
+    color: rgba(216, 219, 221, );
+}
+
+button{
+    margin-top: 50px;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient(to right, #2f649c, );
+}
+.social{
+    margin-top: 30px;
+    display: flex;
+}
+.social div{
+    background: red;
+    width: 150px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 10px 10px 5px;
+}
+.social div:hover{
+    background-color: rgba(255, 255, 255, 0.47);
+
+}
+.social .facebook{
+    margin-left: 10px;
+}
+.social i{
+    margin-left: 4px
+}
+
+.social .google:hover{
+    background: linear-gradient(to left, #204bb8, #6f9fc0);
+    cursor: pointer;
+}
+
+.social .facebook:hover{
+    background: linear-gradient(to right, #c7911e, #c754c7);
+    cursor: pointer;
+}
+
+.bg{
+    width: 430px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 520%;
+}
+
+.shape:first-child{
+    background: linear-gradient(#204bb8, #7eb0e5);
+    left: -80px; top: -80px;
+    filter:blur(10px) ;
+}
+
+.shape:last-child{
+    background: linear-gradient(#a96814, #af7113);
+    right: -30px; bottom: -80px;
+    filter:blur(10px) ;
+}
