@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_TOUR</title>
+</head>
+<body>
+<script>
+/*
+Esercizio 4
+Conta il tempo
+Scrivi un programma che dato un numero di secondi, calcoli la quantità di ore, minuti e secondi 
+corrispondenti e poi stampi il risultato. L'output avrà solo  i numeri interi.
+
+Esempio:
+Input 12560
+Output: 3 ore, 29 minuti e 20 secondi.
+
+Consigli:
+In un'ora ci sono 60 minuti, in un minuto ci sono 60 secondi. Quindi quanti secondi ci sono in un'ora?;)
+*/
+
+var h, m, s;
+
+var inputSeconds = 3600; //12560;
+var secondsHour = 60;
+var secondsMinute = 60 + secondsMinute;
+
+console.log(inputSeconds % secondsHour);
+console.log(inputSeconds % secondsHour % secondsMinute);
+
+
+h = Math.floor(inputSeconds / secondsHour);
+m = Math.floor(inputSeconds % secondsHour / secondsMinute);
+s = inputSeconds % secondsHour % secondsMinute;
+
+let result = h + 'or' + (h == 1 ? 'a' : 'e') + ','+
+             m + 'minut' + (m== 1 ? 'o' : 'i') + 'e' +
+             s + 'second' + (s== 1 ? 'o' : 'i') + '.'
+console.log(result);
+</script>
+<script>
+    switch (color){
+        case 'red':
+        massage = 'stop';
+        break;
+        case 'yellow':
+        case 'blue':
+        case 'purple':
+        case 'magenta':
+        case 'Black':
+            massage = 'alert'
+            break;
+        case 'green':
+            massage = 'go'
+            break;
+        default:
+            throw Error('colore non gestito')
+    }
+
+</script>
+<script>
+    var counter = 1;
+do{
+        console.log("I'm waiting");
+        counter++;
+    }
+    while (false)
+
+    for (var i=0; i<10; i++){
+        console.log("I'm waiting dal for");
+    }
+     var arr = [0, 1, 2, 3, 4];
+     for(var i=0 < arr.length; i++){
+        console.log("I'm waiting dal for" + arr[i] );
+     }
+    
+    // for .. of on Array
+    for(var d of arr){
+        console.log("I'm waiting dal for in " + d);
+    }
+
+    // for .. in on Object(like)
+    var obj= {a:0, b:1, c:2}
+    for (var d in obj){
+        console.log(d);
+        console.log("I'm waiting dal for of" + obj[d]);
+    }
+</script>
+<script>
+    /* Caldo e freddo
+    Scrivere un programma che dati tre valori relativi alle temperature della settimana
+    stabilisca la giornata più calda e quella più fredda.
+
+    Esempio:
+    Input: a=30, b=-2
+    Output: giornata più calda = 30, giornata più fredda = -2
+    */
+   var a = 30;
+   var b = -2;
+   var c = 10;
+
+   var caldo = 0;
+   var freddo = 0;
+
+   /*if(a >= b && b >= c){
+    cald0 = a;
+   }else if(b >= a && a >= c){
+    caldo = b;
+   }else {
+    caldo = c;
+   }*/
+
+   if (a >= b && a >= c){
+    caldo = a;
+    freddo = b < c ? b : c;
+   }else if (a < b && a < c){
+    caldo = b > c ? b : c;// faccio il confronto ternario. i : valgono come altrimenti 
+    freddo = a;
+   }else{
+    freddo = b < a ? b : a;
+    caldo = c;
+   }
+   if (a >= b && a >= c){
+    caldo = a;
+    freddo = b < c ? b : c;
+   }else if (b < a && b < c){
+    caldo = b;// faccio il confronto ternario. i : valgono come altrimenti 
+    freddo = a > c ? a : c;
+   }else{
+    caldo = c;
+    freddo = b < a ? b : a;
+    
+   }
+
+   var resultCaldoFreddo = 'giornata più calda =' + caldo + 'giornata più fredda =' + freddo;
+   console.log(resultCaldoFreddo);
+</script>
+<script>
+    /*
+    Il conta cifre
+    Scrivere un programma che dato un numero (massimo 9999) conti da quante cifre è formato.
+
+    Esempio:
+    Input: numero = 9
+    Outup: 1 cifra
+
+    Input: numero = 245
+    Output: 3 cifre
+    */
+   var num = 1111;
+   var cifra = 0;
+
+   if(num < 0 || num >= 10000){
+     
+    throw Error("Numero non valido");
+   }
+    if(num >= 0 && num <= 9){
+        cifra = 1;
+    } else if(num >= 10 && num <= 99){
+        cifra = 2;
+    } else if(num >= 100 && num <= 999){à
+    }else{
+        cifra = 4;
+    
+   }
+
+   console.log(cifra);
+</script>
+<script>
+/*
+Fai il professore
+Scrivi un programma che converta un voto numerico (v) in un giudizio seguendo questi parametri:
+    v < 18: insufficiente
+    18 <= v < 21: sufficiente
+    21 <= v < 24: buono
+    24 <= v < 27: distinto
+    27 <= v <=29: ottimo
+    v = 30: eccellente 
+Utilizza costrutto if.
+
+Esempio:
+Input: v = 29
+Output: Distinto
+
+Variante
+Realizzare una versione con il costrutto Swicth-Case. In questo caso gestire anche 
+il caso in cui il voto inserito non sia valido.
+*/
+</script>
+<script>
+    var animal = {
+        Breathe function(){
+            //...
+        },
+        birtDate: bew Date()
+        }
+
+
+        var lion = Object.create(animal);
+        lion.Type = "Mammifero";
+        lion.Run = function(){
+
+        };
+        lion.Assault = function(){
+
+        };
+
+        console.log(animal);
+        console.log(lion)
+</script>
+<script>
+    var lion = {
+        Roar: function (){
+            //....
+        },
+        birtDate: new Date ()
+    }
+
+    var felini = {
+        Type : "Mammifero"
+        Run: function()
+        Assault : function()
+    }
+
+    Object.setPrototypeOf(felini, animal);
+    Object.setPrototypeOf(lion, felini);
+    Object.setPrototypeOf(cat, felini);
+
+    console.log(lion)
+    console.log(cat)
+
+    function chageSomething(){
+        delete cat.Assault;ù
+        
+        console.log(lion);
+        console.log(cat);
+    }
+</script>
+</body>
+</html>
